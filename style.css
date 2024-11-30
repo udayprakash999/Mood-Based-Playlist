@@ -1,0 +1,197 @@
+/* General body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #ededed;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background: #000; 
+  
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('dial.png') center no-repeat;
+  background-size: cover;
+  opacity: 0.2; /* Adjust this value for desired transparency */
+  z-index: -1; /* Place it behind the content */
+}
+
+
+/* Container styles */
+.container {
+  background-color: #2f2f2f79; /* Default container background */
+  border-radius: 10px;
+  padding: 30px;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: rgba(255, 255, 255, 0.12) 0px 2px 4px 0px, rgba(255, 255, 255, 0.32) 0px 2px 16px 0px;
+  transition: background-color 0.5s ease;
+}
+
+/* Header styling */
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem; /* Default for large screens */
+  margin-bottom: 10px;
+  color: #ffffff;
+  word-wrap: break-word; /* Prevent text from overflowing */
+}
+
+/* Mood selector */
+#mood-selector {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+select {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  max-width: 200px;
+}
+
+select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.2);
+}
+
+/* Playlist container */
+#playlist-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#playlist-links a {
+  display: inline-block;
+  margin: 10px;
+  font-size: 1rem;
+  color: #3c3c3c;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#playlist-links a:hover {
+  color: #4CAF50;
+  text-decoration: underline;
+}
+
+/* Playlist iframe */
+#playlist-player iframe {
+  margin-top: 20px;
+  border: none;
+  width: 100%;
+  height: 280px;
+  max-width: 600px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#playlist-player iframe:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #bbb;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2rem; /* Adjust font size for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem; /* Adjust font size for small tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 10px;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Adjust font size for phones */
+  }
+
+  select {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  #playlist-links a {
+    font-size: 12px;
+  }
+
+  #playlist-player iframe {
+    height: 200px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+/* Mood-specific styles for the container */
+.container.sad {
+  background-color: #b3c7e674;
+}
+
+.container.happy {
+  background-color: #ffe05881;
+}
+
+.container.calm {
+  background-color: #a8d5ba93;
+}
+
+.container.excited {
+  background-color: #ff7f5f88;
+}
+
+.container.motivational {
+  background-color: #5dd56571;
+}
+
+.container.angry {
+  background-color: #d111009f;
+}
+
+.container.relaxed {
+  background-color: #d0e8f283;
+}
+
+.container.nostalgic {
+  background-color: #f1d0a281;
+}
+
